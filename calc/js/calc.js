@@ -2,8 +2,7 @@
  * Implementation of the basic functions of the calculator
  */
 
-var out = console.log;
-var calc = new Object();
+var calc = {};
 calc["+"] = function (a, b) {
   return a + b;
 };
@@ -17,13 +16,13 @@ calc["/"] = function (a, b) {
   return a / b;
 };
 calc["intDiv"] = function (a, b) {
-  return Math.floor(a/b);
+  return (a - a % b) / b;
 };
 
 for (var operation in calc) {
-  out('current operation: "' + operation + '"');
+  console.log('current operation: "' + operation + '"');
   printCalc(operation);
-  printCalc(operation, 11, 3);
+  printCalc(operation, -11, 3);
   printCalc(operation, 11);
   printCalc(operation, 2, "str1");
   printCalc(operation, 2, true);
@@ -44,12 +43,15 @@ for (var operation in calc) {
   printCalc(operation, {}, {});
   printCalc(operation, {});
   printCalc(operation, {}, null);
-  out();
+  console.log("\n");
 }
 
 function printCalc(operation, a, b){
   var result = calc[operation](a, b);
   var resultString = a + " " + operation + " " + b + " = " + result;
-  var argumentType = typeof a + " " + operation + " " + typeof b + " = " + typeof result;
-  out(argumentType + ":  " + resultString);
+  var argumentType = getType(a) + " " + operation + " " + getType(b) + " = " + getType(result);
+  console.log(argumentType + ":  " + resultString);
+}
+function getType(value){
+  return value === null ? null : typeof value;
 }
