@@ -1,0 +1,10 @@
+CACHE MANIFEST
+
+CACHE:
+stylesheet.css
+
+NETWORK:
+/login.html
+
+FALLBACK:
+/offline.html
