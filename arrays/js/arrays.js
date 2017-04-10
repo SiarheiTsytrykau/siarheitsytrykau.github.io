@@ -1,19 +1,29 @@
 "use strict";
 
-var typeArray = ["string", true, 1, -1.2, null, undefined, {}, [], [1,2], function(){}];
+var typeArray = ["string", true, 1, -1.2, null, undefined, {}, [], [1, 2], function(){}];
 typeArray.forEach(logArrayElements, isArray1);
 typeArray.forEach(logArrayElements, isArray2);
-typeArray.forEach(logArrayElements, isArray3);
 
 console.log("\n");
-[[], [5], [1,5], [1,10,2], [0,10,3]].forEach(function(element) {
-  console.log(this.name, " with arguments ", element.join(), " => ", this.apply(this, element));
-}, range);
+[
+  [10], [1, 10], [1, 10, 3], [1, 10, 3, 8, 20], [10, null, 3], [10, null], [-2, -5], [-5, -2], [-5, -2, 2],
+  [-5, -2, -2], [-5, null, 2], [-5, null, -2], [-10, -20, -5], [-10, -20, -5, 20], [-20, -10, -5]
+].forEach(
+  function(element) {
+    console.log(
+      this.name,
+      " with arguments ", 
+      element.join(),
+      " => ", 
+      this.apply(this, element)
+    );},
+  range
+);
 
 console.log("\n");
 var testArray = [0, 1, true, false, "asdf", "", {}, [], null, undefined];
 console.log(testArray, " true elements: ", compact(testArray));
-console.log(testArray, " true elements: ", testArray.filter(onlyTrue));
+console.log(testArray, " true elements: ", compact1(testArray));
 
 console.log("\n");
 var numberArray = [1, -1, true, false, , "", null];
@@ -28,17 +38,19 @@ console.log("delete 4 last elements from array", excludeLast(testArray, 4));
 console.log("return last element from array: ", lastElement(testArray));
 
 function logArrayElements(element) {
-  console.log(this.name, " with argument ", element, " => ", this(element));
+  console.log(
+    this.name, 
+    " with argument ",
+    element, " => ", 
+    this(element)
+  );
 }
 
 /* isArray function return true value if an argument has the Array type */
 function isArray1(obj) {
-  return Array.isArray(obj);
+  return Object.prototype.toString.call(obj) === "[object Array]";
 }
 function isArray2(obj) {
-  return typeof obj === "object" && Object.prototype.toString.call(obj) === "[object Array]";
-}
-function isArray3(obj) {
   return (obj) instanceof Array;
 }
 
@@ -46,38 +58,41 @@ function isArray3(obj) {
 function range(from, to, step) {
   step = step || 1;
   from = from || 0;
-  if(!to) {
+  if (!to) {
     to = from;
     from = 0;
   }
+  var length = Math.ceil((to - from) / step);
   var result = [];
-  for(from; from < to; from += step) {
-    result.push(from);
+  for (var i = 0; i < length; i++) {
+    result.push(from + step * i);
   }
   return result;
 }
 
 /* Return a new array with true elements */
 function compact(array) {
-  if(!Array.isArray(array)) {
+  if(!isArray1(array)) {
     return;
   }
   var result = [];
-  for(var i = 0; i < array.length; i++) {
-    if(array[i]) result.push(array[i]);
+  for (var i = 0; i < array.length; i++) {
+    if (array[i]) result.push(array[i]);
   }
   return result;
 }
-/* function is used in the Array.filter()
-Return a new array with true elements */
-function onlyTrue(value) {
-  return !!value;
+function compact1(array) {
+  return array.filter(
+    function (element) {
+      return element;
+    }
+  );
 }
 
 /* returns the sum of array elements */
 function sum(array){
   var result = 0;
-  for(var i = 0; i < array.length; i++) {
+  for (var i = 0; i < array.length; i++) {
     result += +array[i];
   }
   return result;
@@ -91,9 +106,7 @@ function sumReduce(array){
 /* delete last elements from array */
 function excludeLast(array, deleteCount) {
   deleteCount = deleteCount || 1 ;
-  var startPos = deleteCount * -1;
-  array.splice(startPos, deleteCount);
-  return array;
+  return array.slice(0, array.length - deleteCount);
 }
 
 /* return last element from array */
@@ -104,8 +117,8 @@ function lastElement(array) {
 /* returns a new array with unique elements */
 function unique(array) {
   var result = [];
-  for(var i = 0; i < array.length; i++) {
-    if(!result.includes(array[i])) {
+  for (var i = 0; i < array.length; i++) {
+    if (!result.includes(array[i])) {
       result.push(array[i]);
     }
   }
