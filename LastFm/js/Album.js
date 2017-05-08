@@ -8,6 +8,7 @@ Album.prototype = Object.create(Artist.prototype);
 Album.prototype.constructor = Album;
 
 Album.prototype.getInfo = function(callback) {
-  var method = "getInfo";
-  this.load(method + "&artist=" + this.artist + "&album=" + this.album, callback);
+  this.method = "getInfo";
+  var queryParam = {artist:this.artist, album:this.album};
+  this.load(queryParam, callback);
 }

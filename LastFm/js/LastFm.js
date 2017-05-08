@@ -4,7 +4,10 @@ function LastFm(api_key) {
 }
 
 LastFm.prototype.load = function(queryParam, callback) {
-  var url = this.rootURL + "?method=" + this.package + "." + queryParam + "&api_key=" + this.apiKey + "&format=json";
+  var url = this.rootURL +
+      "?method=" + this.package + "." + this.method +
+      LastFm.parseParam(queryParam) +
+      "&api_key=" + this.apiKey + "&format=json";
   var request = new XMLHttpRequest();
   request.onreadystatechange = function() {
     if(request.readyState === 4) {
@@ -17,4 +20,12 @@ LastFm.prototype.load = function(queryParam, callback) {
   }
   request.open("GET", url);
   request.send(null);
+}
+
+LastFm.parseParam = function(queryParam) {
+  var result = "";
+  for(var key in queryParam) {
+    result += "&" + key + "=" + encodeURIComponent(queryParam[key]);
+  }
+  return result;
 }

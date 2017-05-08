@@ -1,13 +1,15 @@
 var cher = new Artist("cher");
-cher.getInfo(function(response){
+cher.getInfo(function(response) {
   console.log(response.artist);
 });
-cher.search(function(response){
+cher.search(function(response) {
   console.log(response.results);
 });
 
 var cherBelive = new Album("cher", "Believe");
-cherBelive.getInfo(function(response){console.log(response.album)});
+cherBelive.getInfo(function(response) {
+  console.log(response.album);
+});
 
 var topArtist = new Chart();
 topArtist.getTopArtists(function(response) {

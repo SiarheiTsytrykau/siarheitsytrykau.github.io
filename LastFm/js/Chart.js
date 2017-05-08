@@ -7,6 +7,6 @@ Chart.prototype = Object.create(LastFm.prototype);
 Chart.prototype.constructor = Chart;
 
 Chart.prototype.getTopArtists = function(callback) {
-  var method = "gettopartists";
-  this.load(method, callback);
+  this.method = "gettopartists";
+  this.load({}, callback);
 }

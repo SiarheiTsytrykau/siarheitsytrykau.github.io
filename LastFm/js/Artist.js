@@ -8,11 +8,13 @@ Artist.prototype = Object.create(LastFm.prototype);
 Artist.prototype.constructor = Artist;
 
 Artist.prototype.getInfo = function(callback) {
-  var method = "getInfo";
-  this.load(method + "&artist=" + this.artist, callback);
+  this.method = "getInfo";
+  var queryParam = {artist:this.artist};
+  this.load(queryParam, callback);
 }
 
 Artist.prototype.search = function(callback) {
-  var method = "search";
-  this.load(method + "&artist=" + this.artist, callback);
+  this.method = "search";
+  var queryParam = {artist:this.artist};
+  this.load(queryParam, callback);
 }
