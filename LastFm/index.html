@@ -4,20 +4,25 @@
     <title>LastFm</title>
     <meta charset="UTF-8">
     <meta name="author" content="Siarhei Tsytrykau">
+    <meta name="description" content="Last.fm Web Service">
+    <meta name="keywords" content="last.fm,music,fm,artist,album">
+    <link rel="stylesheet" type="text/css" href="style/stylesheet.css" title="Default Style">
   </head>
-  <body>
-    <header>
-      <h1>Last.fm Web Services</h1>
+  <body onload="show('search')">
+    <header onclick="show('search')">
+      <h1>Last.fm API</h1>
     </header>
+    <div id="ajax"></div>
     <footer>
       <address>
-        Author <a href="mailto:cpserg@gmail.com?Subject=JS%20training%20Last.fm Web Services" title="Send message">Siarhei Tsyrtykau</a>
+        Developed by <a href="cpserg@gmail.com?Subject=JS%20training%20Last%20fm%20Web%20Services" title="Send message">Siarhei Tsyrtykau</a>
       </address>
     </footer>
     <script src="js/LastFm.js"></script>
     <script src="js/Artist.js"></script>
     <script src="js/Album.js"></script>
     <script src="js/Chart.js"></script>
-    <script src="js/Runner.js"></script>
+    <script src="js/Pagination.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
