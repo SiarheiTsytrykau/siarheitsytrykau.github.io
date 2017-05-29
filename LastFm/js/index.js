@@ -1,3 +1,8 @@
+show('search');
+document.querySelector("body > header").onclick = function() {
+  show('search');
+}
+
 function show(sectionId) {
   var layers = {
     search: '<div id="search">' +
