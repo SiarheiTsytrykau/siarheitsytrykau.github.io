@@ -5,8 +5,8 @@ function LastFm(api_key) {
 
 LastFm.prototype.load = function(queryParam, callback) {
   var url = this.rootURL +
-      "?method=" + this.package + "." + this.method +
-      LastFm.parseParam(queryParam) +
+      "?method=" + this.package + "." + queryParam.method +
+      LastFm.parseParam(queryParam.params) +
       "&api_key=" + this.apiKey + "&format=json";
   var request = new XMLHttpRequest();
   request.onreadystatechange = function() {
