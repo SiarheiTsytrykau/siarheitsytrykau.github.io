@@ -1,6 +1,14 @@
-document.getElementById("ajax").innerHTML = Template.search();
+document.getElementById("ajax").innerHTML = createMainScreen();
 document.querySelector("body > header").onclick = function() {
-  document.getElementById("ajax").innerHTML = Template.search();
+  document.getElementById("ajax").innerHTML = createMainScreen();
+}
+
+function createMainScreen() {
+  var chart = new Chart();
+  chart.getTopArtists(function(response) {
+    document.getElementById("ajax").innerHTML = Template.search();
+    document.getElementById("results").innerHTML = response.artists.artist.map(Template.artistFigure).join("");
+  });
 }
 
 function searchArtist(pageNumber = 1) { 
