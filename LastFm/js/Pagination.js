@@ -15,13 +15,13 @@ Pagination.prototype._first = function(start) {
 
 Pagination.prototype._middle = function(start, finish) {
   for (let i = start; i <= finish; i++) {
-    this.paginationElement.innerHTML += '<a>' + i + '</a>';
+    this.paginationElement.innerHTML += `<a>${i}</a>`;
   }
 };
 
 Pagination.prototype._last = function(finish) {
   if (finish !== this.size) {
-    this.paginationElement.innerHTML += '<span>...</span><a>' + this.size + '</a>';
+    this.paginationElement.innerHTML += `<span>...</span><a>${this.size}</a>`;
   }
 };
 
