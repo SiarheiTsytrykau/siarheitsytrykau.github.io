@@ -1,0 +1,91 @@
+@import url(http://fonts.googleapis.com/css?family=Trebuchet+MS);
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+  font-size: 13.3pt;
+  font-weight: normal;
+  text-decoration: none;
+  color: #1f1f1f;
+}
+
+html {
+  background-color: #555;
+}
+
+body {
+  background-color: #fff;
+  margin: 0 auto;
+  width: 936px;
+}
+
+.login {
+  padding: 5px 0;
+  background: #f6f6f6;
+}
+
+.login > * {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  width: 49%;
+  margin-right: 10px;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.login .sign {
+  text-align: right;
+}
+
+.login a, .v span, .login img {
+  margin-right: 10px;
+}
+
+.login::before {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  content: "";
+}
+
+.login::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/* AS TABLE */
+/*
+.login {
+  border: 1px solid red;
+  display: table;
+  width: 100%;
+  height: 46px;
+}
+
+.login > * {
+  display: table-cell;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.login .sign-up {
+  text-align: right;
+}
+
+.login a {
+  padding: 0 10px
+}
+*/
+/*
+full-width
+https://css-tricks.com/full-browser-width-bars/
+*/
