@@ -1,10 +1,63 @@
-@import url(http://fonts.googleapis.com/css?family=Trebuchet+MS);
+@font-face {
+  font-family: "Trebuchet MS";
+  src: url('../fonts/Trebuchet-MS.eot');
+  src: url('../fonts/Trebuchet-MS.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Trebuchet-MS.woff') format('woff'),
+	url('../fonts/Trebuchet-MS.ttf') format('truetype'),
+	url('../fonts/Trebuchet-MS.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Trebuchet MS";
+  src: url('../fonts/Trebuchet-MS-Bold.eot');
+  src: url('../fonts/Trebuchet-MS-Bold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Trebuchet-MS-Bold.woff') format('woff'),
+	url('../fonts/Trebuchet-MS-Bold.ttf') format('truetype'),
+	url('../fonts/Trebuchet-MS-Bold.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+	font-family: "Open Sans Light";
+	src: url('../fonts/OpenSans-Light.eot');
+	src: url('../fonts/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/OpenSans-Light.woff') format('woff'),
+	url('../fonts/OpenSans-Light.ttf') format('truetype'),
+  url('../fonts/OpenSans-Light.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Open Sans";
+	src: url('../fonts/OpenSans-Regular.eot');
+	src: url('../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/OpenSans-Regular.woff') format('woff'),
+	url('../fonts/OpenSans-Regular.ttf') format('truetype'),
+  url('../fonts/OpenSans-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Open Sans";
+	src: url('../fonts/OpenSans-Bold.eot');
+	src: url('../fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/OpenSans-Bold.woff') format('woff'),
+	url('../fonts/OpenSans-Bold.ttf') format('truetype'),
+  url('../fonts/OpenSans-Bold.svg') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
 
 * {
   margin: 0;
   padding: 0;
-  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-  font-size: 13.3pt;
+  font-family: "Trebuchet MS", "Open Sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+  font-size: 13.3px;
   font-weight: normal;
   text-decoration: none;
   color: #1f1f1f;
@@ -17,75 +70,413 @@ html {
 body {
   background-color: #fff;
   margin: 0 auto;
-  width: 936px;
+  overflow-x: hidden;
 }
 
-.login {
-  padding: 5px 0;
-  background: #f6f6f6;
+body > * {
+  margin: 0 12px;
 }
 
-.login > * {
-  display: inline-block;
-  text-align: left;
-  vertical-align: middle;
-  width: 49%;
-  margin-right: 10px;
-  margin: 0;
-  padding: 0;
-  white-space: nowrap;
+h1 {
+  color: #333;
+  font-size: 1.805em;
 }
 
-.login .sign {
-  text-align: right;
+b {
+  font: inherit;
+  color: inherit;
+  font-weight: bold;
 }
 
-.login a, .v span, .login img {
-  margin-right: 10px;
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-.login::before {
+.outer-vertical-align-middle:before {
   display: inline-block;
   height: 100%;
   vertical-align: middle;
   content: "";
 }
 
-.login::after {
-  display: table;
-  content: "";
-  clear: both;
-}
-
-li {
+.inner-vertical-align-middle {
   display: inline-block;
-  list-style-type: none;
+  vertical-align: middle;
 }
 
-/* AS TABLE */
-/*
-.login {
-  border: 1px solid red;
-  display: table;
-  width: 100%;
-  height: 46px;
+.full-screen {
+  position: relative;
+}
+
+.full-screen:before, .full-screen:after {
+  content: "";
+  position: absolute;
+  background-color: #333;
+  top: 0;
+  bottom: 0;
+  width: 9999px;
+}
+
+.full-screen:before {
+  left: 100%;
+}
+
+.full-screen:after {
+  right: 100%;
 }
 
 .login > * {
-  display: table-cell;
+  height: 48px;
+  border: 1px solid red;
+}
+
+.login .trustpilot {
+  float: left;
+}
+
+.login .trustpilot p img {
+  margin: 0 5px;
+}
+
+.login .trustpilot > * {
+  margin-left: -5px;
+}
+
+.login .sign {
+  line-height: 48px;
+  float: right;
+}
+
+.login .sign a {
+  padding: 5px 12px;
+  border: 1px solid #333;
+  font-size: 1.203em;
+}
+
+.info {
+  margin: 24px 0;
+  border: 1px solid red;
+}
+
+.info > * {
+  float: left;
+  height: 98px;
+  border: 1px solid green;
+}
+
+.info .logo {
+  width: 194px;
+  padding-right: 22px;
+  margin-right: 12px;
+}
+
+.info .information:before {
+  content: "";
+  display: block;
+  height: 18px;
+}
+
+.info .information p:first-child {
+  font-size: 1.406em;
+}
+
+.info .information p:nth-child(2) {
+  font-size: 1.605em;
+  color: #dc5047;
+}
+
+.info .information p:last-child {
+  font-size: 1.075em;
+}
+
+.info .info-user {
+  float: right;
+  position: relative;
+  width: 216px;
+}
+
+#cart {
+  color: #fefefe;
+  background-color: #333;
+  width: 100%;
+  height: 40px;
+  margin: 4px 0;
+  text-align: center;
+}
+
+#cart p {
+  display: inline;
+  color: inherit;
+  font-size: 1.203em;
+  line-height: 40px;
+}
+
+#cart p span {
+  color: inherit;
+  font-size: 1.406em;
+}
+
+.info .search {
+  clear: right;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 24px;
+  text-align: left;
+  border: 1px solid #333;
+}
+
+.info .search input[type="search"] {
+  display: inline-block;
+  margin-left: 12px;
+  width: 175px;
+  height: 100%;
+  border: 0;
+  font-size: 1.203em;
+  color: #333;
   vertical-align: middle;
-  margin-right: 20px;
 }
 
-.login .sign-up {
-  text-align: right;
+.info .search input[type="image"] {
+  vertical-align: middle;
+  width: 17px;
+  height: 17px;
 }
 
-.login a {
-  padding: 0 10px
+.main-menu {
+  list-style-type: none;
+  margin: 48px 0;
+  height: 72px;
+  overflow: hidden;
+  background-color: #333;
 }
-*/
+
+.main-menu li {
+  float: left;
+}
+
+.main-menu li a {
+  display: inline-block;
+  padding: 0 12px;
+  margin: 0 18px;
+  font-size: 1.602em;
+  color: #fefefe;
+  text-decoration: none;
+  line-height: 72px;
+}
+
+.main-menu li:first-child a:first-child {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.main-menu a:hover, .main-menu a:focus {
+  background-color: #fff;
+  color: #333;
+}
+
+.banner {
+  position: relative;
+  margin: 72px 12px 48px;
+  background: #6c6c6c;
+}
+
+.banner .slides {
+  white-space: nowrap;
+  font-size: 0;
+  overflow: hidden;
+}
+
+.banner .slides:before {
+  content: "";
+  display: inline-block;
+  //margin-left: -100%;
+  //margin-left: -200%;
+}
+
+.banner figure {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+
+.banner img {
+  vertical-align: middle;
+  display: inline-block;
+  width: 100%;
+}
+
+.banner figcaption {
+  position: absolute;
+  top: 28%;
+  left: 9%;
+  color: #fff;
+  font-size: 2.857em;
+  font-family: 'Open Sans';
+}
+
+.banner input {
+  position: absolute;
+  background-color: unset;
+}
+
+.banner input[type="button"] {
+  top: 70%;
+  left: 10%;
+  width: 220px;
+  height: 36px;
+  color: #fff;
+  font-size: 1.805em;
+  border: 1px solid #fff3eb;
+}
+
+/* TEST IMG */
 /*
-full-width
-https://css-tricks.com/full-browser-width-bars/
+.products li {
+  position: relative;
+}
+
+li.test {
+  list-style: none;
+  position: absolute;
+  left: 12px;
+  z-index: 10;
+  opacity: 0.3;
+}
 */
+
+.products {
+  margin: 24px 0;
+  border: 1px solid red;
+  text-align: justify;
+  font-size: 0;
+}
+
+li.last-line {
+  display: inline-block;
+  width: 100%;
+}
+
+.product {
+  text-align: left;
+  display: inline-block;
+  width: 196px;
+  padding: 10px;
+  margin-bottom: 24px;
+  border: 1px solid  #bdbdbd;
+  font-size: 14.3px;
+}
+
+.product-image p {
+  height: 158px;
+  overflow: hidden;
+}
+
+/* Crop and center the product image */
+.product-image span {
+  display: block;
+  width: 5000px;
+  height: 5000px;
+  margin: -2421px -2402px;
+  text-align: center;
+}
+
+.product-image span:before {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  content: "";
+}
+
+.product-image img {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* end crop and center */
+
+.product-image figcaption, .product-price, .product-order{
+  height: 45px;
+  line-height: 45px;
+}
+
+.product-image figcaption {
+  line-height: 1.5;
+  overflow: hidden;
+  color: #333;
+  font-size: 1.12em;
+  letter-spacing: -1px;  /*-40%*/
+}
+
+.product-price span {
+  color: #dc5047;
+  font-size: 1.308em;
+  //font-size: 18.7px;
+  letter-spacing: -1px;  /*-40%*/
+}
+
+.product-price .old-price {
+  color: #898989;
+  font-size: 1em;
+  font-size: 14.3px;
+  text-decoration: line-through;
+}
+
+.pound span:before {
+  content: "\00A3";
+}
+
+.product-order input {
+  border: 1px solid #aaa;
+  color: #3c3c3c;
+  font-size: 1.4em;
+  font-size: 18.7px;
+  height: 33px;
+  cursor: pointer;
+}
+
+.product-order input[value="Add to cart"] {
+  width: 106px;
+}
+
+.product-order input[value="View"] {
+  width: 70px;
+  position: relative;
+  left: 16px;
+}
+
+/* if screen > 1600 then the content should be centered */
+@media screen and (min-width: 1600px) {
+  body {
+    width: 1600px;
+  }
+}
+*/
+/* screen > 1200 (test for my screen) */
+@media screen and (min-width: 1200px) and (max-width: 1599px) {
+  body {
+    width: 1200px;
+  }
+}
+
+/* screen > 1200 (test for site layout) */
+@media screen and (min-width: 1000px) and (max-width: 1199px) {
+  body {
+    width: 936px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 720px) {
+  .info .info-user {
+    float: left;
+    clear: left;
+  }
+}
+
+@media screen and (max-width: 399px) {
+  .sign {
+    float: left;
+  }
+}
