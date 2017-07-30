@@ -293,9 +293,10 @@
           </ul>
         </article>
       </section>
-      <section class="about-us clearfix">
+
+      <section class="about-us">
         <h1>Why Choose Us</h1>
-        <article>
+        <article class="left-column">
           <h2><img src="image/tick.png" alt="tick">High Quality Products</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -304,7 +305,7 @@
             ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
         </article>
-        <article>
+        <article class="right-column">
           <h2><img src="image/lock.png" alt="lock">Secure Online Shopping</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -313,7 +314,7 @@
             ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
         </article>
-        <article>
+        <article class="center-column">
           <h2><img src="image/truck.png" alt="truck">Free Shipping</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -323,67 +324,74 @@
           </p>
         </article>
       </section>
+
+      <div class="clearfix"></div>
     </div>
 
     <footer>
+
       <div class="newsletter">
-        <p class="newsletter__title">Sign Up For Our Newsletter</p>
-        <form action="" class="newsletter__form">
-          <input type="email" placeholder="Enter your email"/>
-          <input type="submit" value="Sign up">
-        </form>
-        <div class="newsletter__links">
-          <a href="#"><img src="image/google_icon.png" alt="google"></a>
-          <a href="#"><img src="image/pinterest_icon.png" alt="pinterest"></a>
-          <a href="#"><img src="image/twiter_icon.png" alt="twiter"></a>
-          <a href="#"><img src="image/facebook_icon.png" alt="facebook"></a>
+        <div class="content">
+          <p class="newsletter-title left-column">Sign Up For Our Newsletter</p>
+          <div class="newsletter-links right-column">
+            <a href="#"><img src="image/google_icon.png" alt="google"></a>
+            <a href="#"><img src="image/pinterest_icon.png" alt="pinterest"></a>
+            <a href="#"><img src="image/twiter_icon.png" alt="twiter"></a>
+            <a href="#"><img src="image/facebook_icon.png" alt="facebook"></a>
+          </div>
+          <form action="" class="newsletter-form center-column">
+            <input type="email" placeholder="Enter your email"/>
+            <input type="submit" value="Sign up">
+          </form>
         </div>
       </div>
 
-      <div class="company">
-        <div class="company-title">
-          <img class="company-title__logo" src="image/logo.png" alt="Mail order trees">
-          <img class="company-title__rate" src="image/check-rate.jpg" alt="Check rate">
-          <p>
-            I’m Michael Simpson, the founder of Mail Order Trees,
-            and I’ve created this page to share a little bit
-            of my background with you and the story and
-            how Mail Order Trees came about.
-          </p>
+      <div class="content">
+        <div class="company">
+          <div class="company-title">
+            <img class="company-title__logo" src="image/logo.png" alt="Mail order trees">
+            <img class="company-title__rate" src="image/check-rate.jpg" alt="Check rate">
+            <p>
+              I’m Michael Simpson, the founder of Mail Order Trees,
+              and I’ve created this page to share a little bit
+              of my background with you and the story and
+              how Mail Order Trees came about.
+            </p>
+          </div>
+
+          <section>
+            <article class="company-info">
+              <h2>Information</h2>
+              <nav>
+                <a href="#">About us</a>
+                <a href="#">Delivery Information</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms &amp; Conditions</a>
+                <a href="#">Recent Testimonials</a>
+              </nav>
+            </article>
+
+            <article class="company-service">
+              <h2>Customer Service</h2>
+              <nav>
+                <a href="#">Returns</a>
+                <a href="#">Blog</a>
+                <a href="#">Truspilot</a>
+                <a href="#">Gift Vouchers</a>
+                <a href="#">People Testimonials</a>
+              </nav>
+            </article>
+
+            <article class="company-address">
+              <h2>Company Info</h2>
+              <address>
+                <p>Mail Order Trees, 42 Station Road, Foedham, Ely, Cambs CB75LW</p>
+                <a href="mailto:mail@ordertrees.co.uk">Email: mailordertrees.co.uk</a>
+              </address>
+            </article>
+          </section>
+
         </div>
-
-        <section>
-          <article class="company-info">
-            <h2>Information</h2>
-            <nav>
-              <a href="#">About us</a>
-              <a href="#">Delivery Information</a>
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms &amp; Conditions</a>
-              <a href="#">Recent Testimonials</a>
-            </nav>
-          </article>
-
-          <article class="company-service">
-            <h2>Customer Service</h2>
-            <nav>
-              <a href="#">Returns</a>
-              <a href="#">Blog</a>
-              <a href="#">Truspilot</a>
-              <a href="#">Gift Vouchers</a>
-              <a href="#">People Testimonials</a>
-            </nav>
-          </article>
-
-          <article class="company-address">
-            <h2>Company Info</h2>
-            <address>
-              <p>Mail Order Trees, 42 Station Road, Foedham, Ely, Cambs CB75LW</p>
-              <a href="mailto:mail@ordertrees.co.uk">Email: mailordertrees.co.uk</a>
-            </address>
-          </article>
-        </section>
-
       </div>
     </footer>
   </body>
