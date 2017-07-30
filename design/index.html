@@ -5,51 +5,59 @@
     <meta charset="UTF-8">
     <meta name="author" content="Siarhei Tsytrykau">
     <meta name="description" content="Design task">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style/stylesheet.css" title="Default Style">
   </head>
   <body>
     <header>
+      <div class="content">
+        <div class="trustpilot trustpilot_position">
+          <img class="trustpilot__image" src="image/trustpilot_icon.png" alt="trustpilot">
+          <p class="trustpilot__reviews">
+            <span>2,997 reviews</span>
+            <img src="image/stars.png" alt="stars">
+            <span>97%</span>
+          </p>
+        </div>
 
-      <div class="login clearfix">
-        <div class="trustpilot outer-vertical-align-middle">
-          <div class="inner-vertical-align-middle">
-            <img src="image/trustpilot_icon.png" alt="trustpilot">
-            <p>
-              <span>2,997 reviews</span>
-              <img src="image/stars.png" alt="stars">
-              <span>97%</span>
-            </p>
-          </div>
+        <div class="login login_position">
+          <a class="login__sign-up" href="#">sign up</a>
+          <a class="login__sign-in" href="#">sign in</a>
         </div>
-        <div class="sign">
-          <a href="#">sign up</a>
-          <a href="#">sign in</a>
-        </div>
-      </div>
 
-      <div class="info clearfix">
-        <img class="logo" src="image/mail-order-trees.jpg" alt="logo">
-        <div class="information">
-          <p>Call us:</p>
-          <p>Tel. 0800 066 5972</p>
-          <p>(Monday-Friday 9.30 am - 4.30 pm)</p>
+        <div class="clearfix"></div>
+
+        <div class="logo logo_position">
+          <img class="logo__image" class="logo" src="image/logo.png" alt="logo">
         </div>
-        <div class="info-user">
-          <div id="cart">
-            <p>
-              <img src="image/basket.png" alt="basket">
-              <span>Cart:</span> 0 items - &pound; 0.00
-            </p>
-          </div>
-          <form action="" class="search">
-            <input type="search" placeholder="search">
-            <input type="image" src="image/search_icon.png" alt="search">
+
+        <div class="information info_position">
+          <p class="contacts">
+            <span class="contacts__title">Call us:</span>
+            <span class="contacts__phone">Tel. 0800 066 5972</span>
+            <span class="contacts__shop-hours">(Monday-Friday 9.30 am - 4.30 pm)</span>
+          </p>
+        </div>
+
+        <div class="basket basket_position">
+          <p class="cart">
+            <img class="cart__image" src="image/basket.png" alt="basket">
+            <span class="cart__title">Cart:</span>
+            <span class="cart__items">0 items</span>
+            <span class="cart_delimiter">-</span>
+            <span class="cart__price pound">0.00</span>
+          </p>
+          <form class="search-bar" action="">
+            <input class="search-bar__query" type="search" placeholder="search">
+            <input class="search-bar__button" type="image" src="image/search_icon.png" alt="search">
           </form>
         </div>
+
+        <div class="clearfix"></div>
       </div>
 
-      <nav class="full-screen">
-        <ul class="main-menu">
+      <nav class="main-menu">
+        <ul class="content">
           <li><a href="#">About Us</a></li>
           <li><a href="#">Catalogue</a></li>
           <li><a href="#">Season specials</a></li>
@@ -58,297 +66,325 @@
       </nav>
     </header>
 
-    <div class="banner">
-      <div class="slides">
-        <figure>
-          <img src="image/banner_peach.jpg" alt="peach">
-          <figcaption>
-            Check out our season <br>specilas for <b>half price!</b>
-          </figcaption>
-        </figure>
-        <figure>
-          <img src="image/banner_raspberries.jpg" alt="raspberries">
-          <figcaption>
-            Our gift vouchers can<br>be <b>an ideal present</b>
-          </figcaption>
-        </figure>
-        <figure>
-          <img src="image/banner_trees.jpg" alt="trees">
-          <figcaption>
-             We offer a <b>2 year guarantee</b><br>on our trees and plants
-          </figcaption>
-        </figure>
+    <!-- https://www.w3schools.com/howto/howto_js_slideshow.asp //-->
+    <div class="content">
+      <div class="banner">
+        <div class="banner-slides">
+          <figure>
+            <img src="image/banner_peach.jpg" alt="peach">
+            <figcaption>
+              Check out our season <br>specilas for <b>half price!</b>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="image/banner_raspberries.jpg" alt="raspberries">
+            <figcaption>
+              Our gift vouchers can<br>be <b>an ideal present</b>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="image/banner_trees.jpg" alt="trees">
+            <figcaption>
+               We offer a <b>2 year guarantee</b><br>on our trees and plants
+            </figcaption>
+          </figure>
+        </div>
+        <input type="button" value="Learn more">
+        <!--
+        <input type="text" value="circle" style="width: 14px; height:14px; border: 1px solid #fff3eb; border-radius: 14px;">
+        <input type="text" value="point" style="width: 6px; height:6px; border: 1px solid #fff3eb; border-radius: 6px; background-color: #fff3eb;">
+        //-->
       </div>
-      <input type="button" value="Learn more">
-      <!--
-      <input type="text" value="circle" style="width: 14px; height:14px; border: 1px solid #fff3eb; border-radius: 14px;">
-      <input type="text" value="point" style="width: 6px; height:6px; border: 1px solid #fff3eb; border-radius: 6px; background-color: #fff3eb;">
-      //-->
+
+      <section>
+        <article class="clearfix">
+          <h1>Featured Collection</h1>
+          <ul class="products">
+            <li class="product">
+              <figure class="product-image">
+                <p>
+                  <span><img src="image/collection/acer-palmatum-sangokaku.jpg" alt="Acer palmatum 'Sango-kaku' (Coral Bark Maple)"></span>
+                </p>
+                <figcaption>Acer palmatum 'Sango-kaku' (Coral Bark Maple)</figcaption>
+              </figure>
+              <p class="product-price">
+                <span class="pound">34.99</span>
+                <span class="old-price pound">44.99</span>
+              </p>
+              <div class="product-order">
+                <input type="button" value="Add to cart">
+                <input type="button" value="View">
+              </div>
+            </li>
+            <li class="product">
+              <figure class="product-image">
+                <p>
+                  <span><img src="image/collection/blueberries.jpg" alt="Vaccinium 'Bluecrop' (Bluecrop Blueberry Plant)"></span>
+                </p>
+                <figcaption>Vaccinium 'Bluecrop' (Bluecrop Blueberry Plant)</figcaption>
+              </figure>
+              <p class="product-price">
+                <span class="pound">9.99</span>
+              </p>
+              <div class="product-order">
+                <input type="button" value="Add to cart">
+                <input type="button" value="View">
+              </div>
+            </li>
+            <li class="product">
+              <figure class="product-image">
+                <p>
+                  <span><img src="image/collection/pinus-sylvestris.jpg" alt="Pinus Sylvestris (Scots Pine)"></span>
+                </p>
+                <figcaption>Pinus Sylvestris (Scots Pine)</figcaption>
+              </figure>
+              <p class="product-price">
+                <span class="pound">34.99</span>
+                <span class="old-price pound">34.99</span>
+              </p>
+              <div class="product-order">
+                <input type="button" value="Add to cart">
+                <input type="button" value="View">
+              </div>
+            </li>
+            <li class="product">
+              <figure class="product-image">
+                <p>
+                  <span><img src="image/collection/corylus.jpg" alt="Corylus 'Hall's Giant' (Hazelnut Tree)"></span>
+                </p>
+                <figcaption>Corylus 'Hall's Giant' (Hazelnut Tree)</figcaption>
+              </figure>
+              <p class="product-price">
+                <span class="pound">34.99</span>
+              </p>
+              <div class="product-order">
+                <input type="button" value="Add to cart">
+                <input type="button" value="View">
+              </div>
+            </li>
+            <li class="last-line"></li>
+          </ul>
+        </article>
+        <article class="clearfix">
+          <h1>Best Sellers</h1>
+          <ul class="products">
+            <li class="product">
+              <figure class="product-image">
+                <p>
+                  <span><img src="image/collection/prunus-victoria.jpg" alt="Prunus 'Victoria' (Victoria Plum Tree)"><span>
+                </p>
+                <figcaption>Prunus 'Victoria' (Victoria Plum Tree)</figcaption>
+              </figure>
+              <p class="product-price">
+                <span class="pound">34.99</span>
+              </p>
+              <div class="product-order">
+                <input type="button" value="Add to cart">
+                <input type="button" value="View">
+              </div>
+            </li>
+            <li class="product">
+              <figure class="product-image">
+                <p>
+                  <span><img src="image/collection/syringa-louis-spaeth2.jpg" alt="Syringa 'Souvenir de Louis Spaeth' (Lilac Tree)"><span>
+                </p>
+                <figcaption>Syringa 'Souvenir de Louis Spaeth' (Lilac Tree)</figcaption>
+              </figure>
+              <p class="product-price">
+                <span class="pound">39.99</span>
+              </p>
+              <div class="product-order">
+                <input type="button" value="Add to cart">
+                <input type="button" value="View">
+              </div>
+            </li>
+            <li class="product">
+              <figure class="product-image">
+                <p>
+                  <span><img src="image/collection/medlar-nottingham-fruit.jpg" alt="Mespilus 'Nottingham' (Nottingham Medlar Tree)"><span>
+                </p>
+                <figcaption>Mespilus 'Nottingham' (Nottingham Medlar Tree)</figcaption>
+              </figure>
+              <p class="product-price">
+                <span class="pound">14.99</span>
+              </p>
+              <div class="product-order">
+                <input type="button" value="Add to cart">
+                <input type="button" value="View">
+              </div>
+            </li>
+            <li class="product">
+              <figure class="product-image">
+                <p>
+                  <span><img src="image/collection/arbutus-unedo-fruit.jpg" alt="Arbutus unedo (Strawberry Tree)"><span>
+                </p>
+                <figcaption>Arbutus unedo (Strawberry Tree)</figcaption>
+              </figure>
+              <p class="product-price">
+                <span class="pound">25.99</span>
+              </p>
+              <div class="product-order">
+                <input type="button" value="Add to cart">
+                <input type="button" value="View">
+              </div>
+            </li>
+            <li class="last-line"></li>
+            <li class="product">
+              <figure class="product-image">
+                <p>
+                  <span><img src="image/collection/prunus-victoria.jpg" alt="Prunus 'Victoria' (Victoria Plum Tree)"><span>
+                </p>
+                <figcaption>Prunus 'Victoria' (Victoria Plum Tree)</figcaption>
+              </figure>
+              <p class="product-price">
+                <span class="pound">34.99</span>
+              </p>
+              <div class="product-order">
+                <input type="button" value="Add to cart">
+                <input type="button" value="View">
+              </div>
+            </li>
+            <li class="product">
+              <figure class="product-image">
+                <p>
+                  <span><img src="image/collection/syringa-louis-spaeth2.jpg" alt="Syringa 'Souvenir de Louis Spaeth' (Lilac Tree)"><span>
+                </p>
+                <figcaption>Syringa 'Souvenir de Louis Spaeth' (Lilac Tree)</figcaption>
+              </figure>
+              <p class="product-price">
+                <span class="pound">39.99</span>
+              </p>
+              <div class="product-order">
+                <input type="button" value="Add to cart">
+                <input type="button" value="View">
+              </div>
+            </li>
+            <li class="product">
+              <figure class="product-image">
+                <p>
+                  <span><img src="image/collection/medlar-nottingham-fruit.jpg" alt="Mespilus 'Nottingham' (Nottingham Medlar Tree)"><span>
+                </p>
+                <figcaption>Mespilus 'Nottingham' (Nottingham Medlar Tree)</figcaption>
+              </figure>
+              <p class="product-price">
+                <span class="pound">14.99</span>
+              </p>
+              <div class="product-order">
+                <input type="button" value="Add to cart">
+                <input type="button" value="View">
+              </div>
+            </li>
+            <li class="product">
+              <figure class="product-image">
+                <p>
+                  <span><img src="image/collection/arbutus-unedo-fruit.jpg" alt="Arbutus unedo (Strawberry Tree)"><span>
+                </p>
+                <figcaption>Arbutus unedo (Strawberry Tree)</figcaption>
+              </figure>
+              <p class="product-price">
+                <span class="pound">25.99</span>
+              </p>
+              <div class="product-order">
+                <input type="button" value="Add to cart">
+                <input type="button" value="View">
+              </div>
+            </li>
+            <li class="last-line"></li>
+          </ul>
+        </article>
+      </section>
+      <section class="about-us clearfix">
+        <h1>Why Choose Us</h1>
+        <article>
+          <h2><img src="image/tick.png" alt="tick">High Quality Products</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </article>
+        <article>
+          <h2><img src="image/lock.png" alt="lock">Secure Online Shopping</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </article>
+        <article>
+          <h2><img src="image/truck.png" alt="truck">Free Shipping</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </article>
+      </section>
     </div>
 
-    <section>
-      <article class="clearfix">
-        <h1>Featured Collection</h1>
-        <ul class="products">
-          <!--
-          <li class="test">
-            <img class="test-img" src="image/product.jpg" alt="">
-          </li>
-          //-->
-          <li class="product">
-            <figure class="product-image">
-              <p><span><img src="image/collection/acer-palmatum-sangokaku.jpg" alt="Acer palmatum 'Sango-kaku' (Coral Bark Maple)"></span></p>
-              <figcaption>Acer palmatum 'Sango-kaku' (Coral Bark Maple)</figcaption>
-            </figure>
-            <p class="product-price pound">
-              <span>34.99</span>
-              <span class="old-price">44.99</span>
-            </p>
-            <div class="product-order">
-              <input type="button" value="Add to cart">
-              <input type="button" value="View">
-            </div>
-          </li>
-          <li class="product">
-            <figure class="product-image">
-              <p><span><img src="image/collection/blueberries.jpg" alt="Vaccinium 'Bluecrop' (Bluecrop Blueberry Plant)"></span></p>
-              <figcaption>Vaccinium 'Bluecrop' (Bluecrop Blueberry Plant)</figcaption>
-            </figure>
-            <p class="product-price pound">
-              <span>9.99</span>
-            </p>
-            <div class="product-order">
-              <input type="button" value="Add to cart">
-              <input type="button" value="View">
-            </div>
-          </li>
-          <li class="product">
-            <figure class="product-image">
-              <p><span><img src="image/collection/pinus-sylvestris.jpg" alt="Pinus Sylvestris (Scots Pine)"></span></p>
-              <figcaption>Pinus Sylvestris (Scots Pine)</figcaption>
-            </figure>
-            <p class="product-price pound">
-              <span>34.99</span>
-              <span class="old-price">34.99</span>
-            </p>
-            <div class="product-order">
-              <input type="button" value="Add to cart">
-              <input type="button" value="View">
-            </div>
-          </li>
-          <li class="product">
-            <figure class="product-image">
-              <p><span><img src="image/collection/corylus.jpg" alt="Corylus 'Hall's Giant' (Hazelnut Tree)"></span></p>
-              <figcaption>Corylus 'Hall's Giant' (Hazelnut Tree)</figcaption>
-            </figure>
-            <p class="product-price pound">
-              <span>34.99</span>
-            </p>
-            <div class="product-order">
-              <input type="button" value="Add to cart">
-              <input type="button" value="View">
-            </div>
-          </li>
-          <li class="last-line"></li>
-        </ul>
-      </article>
-      <article class="clearfix">
-        <h1>Best Sellers</h1>
-        <ul class="products">
-          <li class="product">
-            <figure class="product-image">
-              <p><span><img src="image/collection/prunus-victoria.jpg" alt="Prunus 'Victoria' (Victoria Plum Tree)"><span></p>
-              <figcaption>Prunus 'Victoria' (Victoria Plum Tree)</figcaption>
-            </figure>
-            <p class="product-price pound">
-              <span>34.99</span>
-            </p>
-            <div class="product-order">
-              <input type="button" value="Add to cart">
-              <input type="button" value="View">
-            </div>
-          </li>
-          <li class="product">
-            <figure class="product-image">
-              <p><span><img src="image/collection/syringa-louis-spaeth2.jpg" alt="Syringa 'Souvenir de Louis Spaeth' (Lilac Tree)"><span></p>
-              <figcaption>Syringa 'Souvenir de Louis Spaeth' (Lilac Tree)</figcaption>
-            </figure>
-            <p class="product-price pound">
-              <span>39.99</span>
-            </p>
-            <div class="product-order">
-              <input type="button" value="Add to cart">
-              <input type="button" value="View">
-            </div>
-          </li>
-          <li class="product">
-            <figure class="product-image">
-              <p><span><img src="image/collection/medlar-nottingham-fruit.jpg" alt="Mespilus 'Nottingham' (Nottingham Medlar Tree)"><span></p>
-              <figcaption>Mespilus 'Nottingham' (Nottingham Medlar Tree)</figcaption>
-            </figure>
-            <p class="product-price pound">
-              <span>14.99</span>
-            </p>
-            <div class="product-order">
-              <input type="button" value="Add to cart">
-              <input type="button" value="View">
-            </div>
-          </li>
-          <li class="product">
-            <figure class="product-image">
-              <p><span><img src="image/collection/arbutus-unedo-fruit.jpg" alt="Arbutus unedo (Strawberry Tree)"><span></p>
-              <figcaption>Arbutus unedo (Strawberry Tree)</figcaption>
-            </figure>
-            <p class="product-price pound">
-              <span>25.99</span>
-            </p>
-            <div class="product-order">
-              <input type="button" value="Add to cart">
-              <input type="button" value="View">
-            </div>
-          </li>
-          <!--ul.products//-->
-          <li class="last-line"></li>
-          <li class="product">
-            <figure class="product-image">
-              <p><span><img src="image/collection/prunus-victoria.jpg" alt="Prunus 'Victoria' (Victoria Plum Tree)"><span></p>
-              <figcaption>Prunus 'Victoria' (Victoria Plum Tree)</figcaption>
-            </figure>
-            <p class="product-price pound">
-              <span>34.99</span>
-            </p>
-            <div class="product-order">
-              <input type="button" value="Add to cart">
-              <input type="button" value="View">
-            </div>
-          </li>
-          <li class="product">
-            <figure class="product-image">
-              <p><span><img src="image/collection/syringa-louis-spaeth2.jpg" alt="Syringa 'Souvenir de Louis Spaeth' (Lilac Tree)"><span></p>
-              <figcaption>Syringa 'Souvenir de Louis Spaeth' (Lilac Tree)</figcaption>
-            </figure>
-            <p class="product-price pound">
-              <span>39.99</span>
-            </p>
-            <div class="product-order">
-              <input type="button" value="Add to cart">
-              <input type="button" value="View">
-            </div>
-          </li>
-          <li class="product">
-            <figure class="product-image">
-              <p><span><img src="image/collection/medlar-nottingham-fruit.jpg" alt="Mespilus 'Nottingham' (Nottingham Medlar Tree)"><span></p>
-              <figcaption>Mespilus 'Nottingham' (Nottingham Medlar Tree)</figcaption>
-            </figure>
-            <p class="product-price pound">
-              <span>14.99</span>
-            </p>
-            <div class="product-order">
-              <input type="button" value="Add to cart">
-              <input type="button" value="View">
-            </div>
-          </li>
-          <li class="product">
-            <figure class="product-image">
-              <p><span><img src="image/collection/arbutus-unedo-fruit.jpg" alt="Arbutus unedo (Strawberry Tree)"><span></p>
-              <figcaption>Arbutus unedo (Strawberry Tree)</figcaption>
-            </figure>
-            <p class="product-price pound">
-              <span>25.99</span>
-            </p>
-            <div class="product-order">
-              <input type="button" value="Add to cart">
-              <input type="button" value="View">
-            </div>
-          </li>
-          <li class="last-line"></li>
-        </ul>
-      </article>
-    </section>
-    <section>
-      <h1>Why Choose Us</h1>
-      <article>
-        <h2 style="font-size: 1.605em; color: #3c3c3c;">High Quality Products</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-      </article>
-      <article>
-        <h2>Free Shipping</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-      </article>
-      <article>
-        <h2>Secure Online Shopping</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-      </article>
-    </section>
-
-    <footer class="full-screen">
-      <div style="height: 72px;">
-        <p style="font-size: 1.605em;">Sign Up For Our Newsletter</p>
-        <form action="">
+    <footer>
+      <div class="newsletter">
+        <p class="newsletter__title">Sign Up For Our Newsletter</p>
+        <form action="" class="newsletter__form">
           <input type="email" placeholder="Enter your email"/>
           <input type="submit" value="Sign up">
         </form>
-        <span style="background-color: #3c3c3c;">
+        <div class="newsletter__links">
           <a href="#"><img src="image/google_icon.png" alt="google"></a>
           <a href="#"><img src="image/pinterest_icon.png" alt="pinterest"></a>
           <a href="#"><img src="image/twiter_icon.png" alt="twiter"></a>
           <a href="#"><img src="image/facebook_icon.png" alt="facebook"></a>
-        </span>
+        </div>
       </div>
-      <ul>
-        <li>
-          <img style="width: 136px; height: 69px;" src="image/mail-order-trees.jpg" alt="Mail order trees">
-          <img style="width: 68px; height: 26px;" src="image/check-rate.jpg" alt="checkRate">
+
+      <div class="company">
+        <div class="company-title">
+          <img class="company-title__logo" src="image/logo.png" alt="Mail order trees">
+          <img class="company-title__rate" src="image/check-rate.jpg" alt="Check rate">
           <p>
             I’m Michael Simpson, the founder of Mail Order Trees,
             and I’ve created this page to share a little bit
             of my background with you and the story and
             how Mail Order Trees came about.
           </p>
-        </li>
-        <li>
-          <h2>Customer Service</h2>
-          <ul style="font-size: 1.203em; color: #3c3c3c;">
-            <li>Returns</li>
-            <li>Blog</li>
-            <li>Truspilot </li>
-            <li>Gift Vouchers</li>
-            <li>People Testimonials</li>
-          </ul>
-        </li>
-        <li>
-          <h2>Information</h2>
-          <ul style="font-size: 1.203em; color: #3c3c3c;">
-            <li>About us</li>
-            <li>Delivery Information</li>
-            <li>Privacy Policy</li>
-            <li>Terms &amp; Conditions</li>
-            <li>Recent Testimonials</li>
-          </ul>
-        </li>
-        <li>
-          <h2>Company Info</h2>
-          <address>
-            Mail Order Trees, 42 Station Road, Foedham, Ely, Cambs CB75LW
-            <a href="mailto:mail@ordertrees.co.uk">Email: mailordertrees.co.uk</a>
-          </address>
-        </li>
-      </ul>
+        </div>
+
+        <section>
+          <article class="company-info">
+            <h2>Information</h2>
+            <nav>
+              <a href="#">About us</a>
+              <a href="#">Delivery Information</a>
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms &amp; Conditions</a>
+              <a href="#">Recent Testimonials</a>
+            </nav>
+          </article>
+
+          <article class="company-service">
+            <h2>Customer Service</h2>
+            <nav>
+              <a href="#">Returns</a>
+              <a href="#">Blog</a>
+              <a href="#">Truspilot</a>
+              <a href="#">Gift Vouchers</a>
+              <a href="#">People Testimonials</a>
+            </nav>
+          </article>
+
+          <article class="company-address">
+            <h2>Company Info</h2>
+            <address>
+              <p>Mail Order Trees, 42 Station Road, Foedham, Ely, Cambs CB75LW</p>
+              <a href="mailto:mail@ordertrees.co.uk">Email: mailordertrees.co.uk</a>
+            </address>
+          </article>
+        </section>
+
+      </div>
     </footer>
   </body>
 </html>

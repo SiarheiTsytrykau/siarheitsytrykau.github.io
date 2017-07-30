@@ -63,23 +63,18 @@
   color: #1f1f1f;
 }
 
-html {
-  background-color: #555;
-}
-
 body {
   background-color: #fff;
-  margin: 0 auto;
-  overflow-x: hidden;
-}
-
-body > * {
-  margin: 0 12px;
 }
 
 h1 {
-  color: #333;
   font-size: 1.805em;
+  color: #333;
+}
+
+h2 {
+  font-size: 21.3px;
+  color: #3c3c3c;
 }
 
 b {
@@ -88,227 +83,241 @@ b {
   font-weight: bold;
 }
 
+li {
+  list-style: none;
+}
+
 .clearfix:after {
   content: "";
   display: table;
   clear: both;
 }
 
-.outer-vertical-align-middle:before {
+.content {
+  margin: 0 auto;
+  padding-left: 12px;
+  padding-right: 12px;
+  box-sizing: border-box;
+}
+
+.pound:before {
+  content: "\00A3";
+  color: inherit;
+}
+
+/*------------------------------------*\
+  #HEADER
+\*------------------------------------*/
+.trustpilot, .login, .logo, .information, .basket {
   display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-  content: "";
+  width: 216px;
 }
-
-.inner-vertical-align-middle {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.full-screen {
-  position: relative;
-}
-
-.full-screen:before, .full-screen:after {
-  content: "";
-  position: absolute;
-  background-color: #333;
-  top: 0;
-  bottom: 0;
-  width: 9999px;
-}
-
-.full-screen:before {
-  left: 100%;
-}
-
-.full-screen:after {
-  right: 100%;
-}
-
-.login > * {
+.trustpilot, .login {
   height: 48px;
-  border: 1px solid red;
+}
+.logo, .information, .basket {
+  height: 96px;
 }
 
-.login .trustpilot {
+/*------------------------------------*\
+  #TRUSTPILOT
+\*------------------------------------*/
+.trustpilot {
+  line-height: 24px;
+}
+.trustpilot__image, .trustpilot__reviews {
+  display: inline-block;
+  height: 13px;
+  line-height: 13px;
+}
+.trustpilot__image {
+  vertical-align: bottom;
+}
+.trustpilot__reviews {
+  vertical-align: top;
+}
+.trustpilot_position {
   float: left;
 }
 
-.login .trustpilot p img {
-  margin: 0 5px;
-}
-
-.login .trustpilot > * {
-  margin-left: -5px;
-}
-
-.login .sign {
+/*------------------------------------*\
+  #LOGIN
+\*------------------------------------*/
+.login {
   line-height: 48px;
+  text-align: right;
+}
+.login__sign-up, .login__sign-in {
+  display: inline-block;
+  width: 67px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  border: 1px solid #333;
+}
+.login_position {
   float: right;
 }
 
-.login .sign a {
-  padding: 5px 12px;
-  border: 1px solid #333;
-  font-size: 1.203em;
+/*------------------------------------*\
+  #LOGO
+\*------------------------------------*/
+.logo__image {
+  height: 100%;
 }
-
-.info {
-  margin: 24px 0;
-  border: 1px solid red;
-}
-
-.info > * {
+.logo_position {
   float: left;
-  height: 98px;
-  border: 1px solid green;
 }
 
-.info .logo {
-  width: 194px;
-  padding-right: 22px;
-  margin-right: 12px;
+/*------------------------------------*\
+  #INFORMATION
+\*------------------------------------*/
+.information {
+  line-height: 96px;
 }
-
-.info .information:before {
-  content: "";
+.contacts {
+  display: inline-block;
+  line-height: 24px;
+  vertical-align: bottom;
+}
+.contacts__title, .contacts__phone, .contacts__shop-hours {
   display: block;
-  height: 18px;
 }
-
-.info .information p:first-child {
+.contacts__title {
   font-size: 1.406em;
 }
-
-.info .information p:nth-child(2) {
+.contacts__phone {
   font-size: 1.605em;
   color: #dc5047;
 }
-
-.info .information p:last-child {
+.contacts__shop-hours {
   font-size: 1.075em;
+  letter-spacing: -0.5px;
 }
-
-.info .info-user {
-  float: right;
-  position: relative;
-  width: 216px;
-}
-
-#cart {
-  color: #fefefe;
-  background-color: #333;
-  width: 100%;
-  height: 40px;
-  margin: 4px 0;
-  text-align: center;
-}
-
-#cart p {
-  display: inline;
-  color: inherit;
-  font-size: 1.203em;
-  line-height: 40px;
-}
-
-#cart p span {
-  color: inherit;
-  font-size: 1.406em;
-}
-
-.info .search {
-  clear: right;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 24px;
-  text-align: left;
-  border: 1px solid #333;
-}
-
-.info .search input[type="search"] {
-  display: inline-block;
-  margin-left: 12px;
-  width: 175px;
-  height: 100%;
-  border: 0;
-  font-size: 1.203em;
-  color: #333;
-  vertical-align: middle;
-}
-
-.info .search input[type="image"] {
-  vertical-align: middle;
-  width: 17px;
-  height: 17px;
-}
-
-.main-menu {
-  list-style-type: none;
-  margin: 48px 0;
-  height: 72px;
-  overflow: hidden;
-  background-color: #333;
-}
-
-.main-menu li {
+.information_position {
   float: left;
 }
 
+/*------------------------------------*\
+  #BASKET
+\*------------------------------------*/
+.basket {
+  line-height: 48px;
+}
+.basket_position {
+  float: right;
+}
+
+/*------------------------------------*\
+  #CART
+\*------------------------------------*/
+.cart {
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  text-align: center;
+  color: #fefefe;
+  background-color: #333;
+  font-size: 16px;
+  word-spacing: 2px;
+}
+.cart__title, .cart__items, .cart_delimiter, .cart__price {
+  color: inherit;
+  font-size: inherit;
+}
+.cart__title {
+  font-size: 18.7px;
+}
+
+/*------------------------------------*\
+  #SEARCH-BAR
+\*------------------------------------*/
+.search-bar {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 26px;
+  vertical-align: bottom;
+  border: 1px solid #333;
+}
+.search-bar__query {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  padding: 0 26px 0 5px;
+  color: #333;
+}
+.search-bar__button {
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  margin-top: -8px;
+}
+
+/*------------------------------------*\
+  #MAIN-MENU
+\*------------------------------------*/
+.main-menu {
+  height: 72px;
+  line-height: 72px;
+  margin: 48px 0;
+  background-color: #333;
+}
+.main-menu li {
+  display: inline-block;
+}
 .main-menu li a {
   display: inline-block;
   padding: 0 12px;
   margin: 0 18px;
   font-size: 1.602em;
   color: #fefefe;
-  text-decoration: none;
-  line-height: 72px;
 }
-
 .main-menu li:first-child a:first-child {
   margin-left: 0;
   padding-left: 0;
 }
-
 .main-menu a:hover, .main-menu a:focus {
   background-color: #fff;
   color: #333;
 }
 
+/*------------------------------------*\
+  #BANNER
+\*------------------------------------*/
 .banner {
   position: relative;
-  margin: 72px 12px 48px;
+  margin: 72px 0 48px;
   background: #6c6c6c;
 }
-
-.banner .slides {
+.banner-slides {
   white-space: nowrap;
   font-size: 0;
   overflow: hidden;
 }
-
-.banner .slides:before {
+.banner-slides:before {
   content: "";
   display: inline-block;
   //margin-left: -100%;
   //margin-left: -200%;
 }
-
 .banner figure {
   width: 100%;
   display: inline-block;
   text-align: center;
   position: relative;
 }
-
 .banner img {
   vertical-align: middle;
   display: inline-block;
   width: 100%;
 }
-
 .banner figcaption {
   position: absolute;
   top: 28%;
@@ -317,12 +326,10 @@ b {
   font-size: 2.857em;
   font-family: 'Open Sans';
 }
-
 .banner input {
   position: absolute;
   background-color: unset;
 }
-
 .banner input[type="button"] {
   top: 70%;
   left: 10%;
@@ -333,33 +340,19 @@ b {
   border: 1px solid #fff3eb;
 }
 
-/* TEST IMG */
-/*
-.products li {
-  position: relative;
-}
-
-li.test {
-  list-style: none;
-  position: absolute;
-  left: 12px;
-  z-index: 10;
-  opacity: 0.3;
-}
-*/
-
+/*------------------------------------*\
+  #PRODUCTS
+\*------------------------------------*/
 .products {
   margin: 24px 0;
-  border: 1px solid red;
+  //border: 1px solid red;
   text-align: justify;
   font-size: 0;
 }
-
-li.last-line {
+.last-line {
   display: inline-block;
   width: 100%;
 }
-
 .product {
   text-align: left;
   display: inline-block;
@@ -369,12 +362,10 @@ li.last-line {
   border: 1px solid  #bdbdbd;
   font-size: 14.3px;
 }
-
 .product-image p {
   height: 158px;
   overflow: hidden;
 }
-
 /* Crop and center the product image */
 .product-image span {
   display: block;
@@ -383,25 +374,21 @@ li.last-line {
   margin: -2421px -2402px;
   text-align: center;
 }
-
 .product-image span:before {
   display: inline-block;
   vertical-align: middle;
   height: 100%;
   content: "";
 }
-
 .product-image img {
   display: inline-block;
   vertical-align: middle;
 }
 /* end crop and center */
-
 .product-image figcaption, .product-price, .product-order{
   height: 45px;
   line-height: 45px;
 }
-
 .product-image figcaption {
   line-height: 1.5;
   overflow: hidden;
@@ -409,25 +396,18 @@ li.last-line {
   font-size: 1.12em;
   letter-spacing: -1px;  /*-40%*/
 }
-
 .product-price span {
   color: #dc5047;
   font-size: 1.308em;
   //font-size: 18.7px;
   letter-spacing: -1px;  /*-40%*/
 }
-
 .product-price .old-price {
   color: #898989;
   font-size: 1em;
   font-size: 14.3px;
   text-decoration: line-through;
 }
-
-.pound span:before {
-  content: "\00A3";
-}
-
 .product-order input {
   border: 1px solid #aaa;
   color: #3c3c3c;
@@ -436,47 +416,191 @@ li.last-line {
   height: 33px;
   cursor: pointer;
 }
-
 .product-order input[value="Add to cart"] {
   width: 106px;
 }
-
 .product-order input[value="View"] {
   width: 70px;
   position: relative;
   left: 16px;
 }
 
-/* if screen > 1600 then the content should be centered */
-@media screen and (min-width: 1600px) {
-  body {
-    width: 1600px;
-  }
+/*------------------------------------*\
+  #ABOUT-US
+\*------------------------------------*/
+.about-us article {
+  text-align: justify;
+  width: 30%;
+  margin: 0 auto;
 }
-*/
-/* screen > 1200 (test for my screen) */
-@media screen and (min-width: 1200px) and (max-width: 1599px) {
-  body {
-    width: 1200px;
-  }
+.about-us img {
+  height: 100%;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.about-us h2 {
+  height: 48px;
+  margin: 24px 0;
+  letter-spacing: -1px;
+}
+.about-us p {
+  color: #474747;
+  font-size: 16px;
 }
 
-/* screen > 1200 (test for site layout) */
-@media screen and (min-width: 1000px) and (max-width: 1199px) {
-  body {
-    width: 936px;
-  }
+.about-us article:nth-child(2) {
+  background-color: yellow;
+  float: left;
 }
 
-@media screen and (min-width: 400px) and (max-width: 720px) {
-  .info .info-user {
+.about-us article:nth-child(3) {
+  background-color: red;
+  float: right;
+}
+
+.newsletter {
+  height: 72px;
+  background-color: #3c3c3c;
+}
+
+.newsletter:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.newsletter > * {
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid red;
+}
+
+.newsletter__title {
+  font-size: 1.605em;
+  font-size: 21.3px;
+  color: #fff;
+}
+
+.newsletter__links {
+  text-align: center;
+}
+
+.newsletter__links img {
+  height: 24px;
+}
+
+.newsletter__links a {
+  margin: 0 12px;
+  border: 1px solid red;
+}
+
+.newsletter__form {
+  width: 294px;
+  position: relative;
+}
+
+.newsletter__form input {
+  border: none;
+  height: 36px;
+}
+
+.newsletter__form input[type=email] {
+  width: 64%;
+  background-color: #fff;
+  color: #3c3c3c;
+  font-size: 14.7px;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+.newsletter__form input[type=submit] {
+  position: absolute;
+  right: 0;
+  width: 36%;
+  background-color: #f19200;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18.7px;
+}
+
+/*-------------------------*\
+#COMPANY
+\*-------------------------*/
+
+.company {
+  margin-top: 48px;
+  border: 1px solid green;
+}
+
+.company-title, .company-info, .company-service, .company-address {
+  float: left;
+  width: 216px;
+}
+
+.company-title {
+  width: 216px;
+}
+
+.company-title__logo {
+  width: 136px;
+  -moz-filter:grayscale(100%);
+  -webkit-filter:grayscale(100%);
+  -o-filter:grayscale(100%);
+  -ms-filter:grayscale(100%);
+  filter:grayscale(100%);
+}
+
+.company-title__rate {
+  width: 68px;
+}
+
+.company-title p {
+  font-size: 13.3px;
+  color: #3c3c3c;
+  line-height: 24px;
+  text-align: justify;
+}
+
+.company-info a, .company-service a, .company-address a, .company-address p {
+  display: block;
+  font-size: 16px;
+  color: #3c3c3c;
+}
+
+/*one column*/
+@media (max-width: 479px) {
+  .content {
+    width: 240px;
+  }
+  .basket_position, .login_position {
     float: left;
-    clear: left;
+  }
+  .login_position {
+    text-align: left;
   }
 }
-
-@media screen and (max-width: 399px) {
-  .sign {
+/*two columns*/
+@media (min-width: 480px) and (max-width: 719px) {
+  .content {
+    width: 480px;
+  }
+  .basket {
+    width: 100%;
+  }
+  .basket_position {
     float: left;
+  }
+}
+/*three columns*/
+@media (min-width: 720px) and (max-width: 959px) {
+  .content {
+    width: 720px;
+  }
+}
+/*four columns*/
+@media (min-width: 960px) {
+  .content {
+    width: 960px;
   }
 }
