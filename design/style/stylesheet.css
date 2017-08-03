@@ -56,35 +56,37 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Trebuchet MS", "Open Sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-  font-size: 13.3px;
-  font-weight: normal;
-  text-decoration: none;
-  color: #1f1f1f;
 }
 
 body {
   background-color: #fff;
+  font-family: "Trebuchet MS", "Open Sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+  font-size: 13.3px;
+  font-weight: normal;
+  color: #333;
 }
 
 h1 {
-  font-size: 1.805em;
-  color: #333;
+  font-size: 24px;
+  font-weight: normal;
 }
 
 h2 {
   font-size: 21.3px;
-  color: #3c3c3c;
+  font-weight: normal;
 }
 
 b {
-  font: inherit;
-  color: inherit;
   font-weight: bold;
 }
 
 li {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .clearfix:after {
@@ -97,13 +99,27 @@ li {
   margin: 0 auto;
   padding-left: 12px;
   padding-right: 12px;
-  //padding: 0 12px;
   box-sizing: border-box;
 }
 
 .pound:before {
   content: "\00A3";
-  color: inherit;
+}
+
+.left-column, .right-column, .center-column {
+  width: 296px;
+}
+
+.left-column {
+  float: left;
+}
+
+.right-column {
+  float: right;
+}
+
+.center-column {
+  margin: 0 auto;
 }
 
 /*------------------------------------*\
@@ -136,6 +152,7 @@ li {
 }
 .trustpilot__reviews {
   vertical-align: top;
+  color: #1f1f1f;
 }
 .trustpilot_position {
   float: left;
@@ -147,6 +164,7 @@ li {
 .login {
   line-height: 48px;
   text-align: right;
+  font-size: 1.203em;
 }
 .login__sign-up, .login__sign-in {
   display: inline-block;
@@ -221,15 +239,11 @@ li {
   text-align: center;
   color: #fefefe;
   background-color: #333;
-  font-size: 16px;
+  font-size: 1.203em;
   word-spacing: 2px;
 }
-.cart__title, .cart__items, .cart_delimiter, .cart__price {
-  color: inherit;
-  font-size: inherit;
-}
 .cart__title {
-  font-size: 18.7px;
+  font-size: 1.169em;
 }
 
 /*------------------------------------*\
@@ -251,6 +265,7 @@ li {
   width: 100%;
   padding: 0 26px 0 5px;
   color: #333;
+  font-size: 1.203em;
 }
 .search-bar__button {
   width: 17px;
@@ -286,7 +301,7 @@ li {
 }
 .main-menu a:hover, .main-menu a:focus {
   background-color: #fff;
-  color: #333;
+  color: inherit;
 }
 
 /*------------------------------------*\
@@ -321,10 +336,17 @@ li {
 }
 .banner figcaption {
   position: absolute;
-  top: 28%;
-  left: 9%;
+  top: 25%;
+  left: 0;
   color: #fff;
-  font-size: 2.857em;
+  font-size: 38px;
+  line-height: 48px;
+  font-family: 'Open Sans Light';
+  width: 50%;
+  letter-spacing: -2px;
+  white-space: normal;
+}
+.banner figcaption b {
   font-family: 'Open Sans';
 }
 .banner input {
@@ -394,13 +416,13 @@ li {
   overflow: hidden;
   color: #333;
   font-size: 1.12em;
-  letter-spacing: -1px;  /*-40%*/
+  letter-spacing: -1px;
 }
 .product-price span {
   color: #dc5047;
   font-size: 1.308em;
   //font-size: 18.7px;
-  letter-spacing: -1px;  /*-40%*/
+  letter-spacing: -1px;
 }
 .product-price .old-price {
   color: #898989;
@@ -430,8 +452,6 @@ li {
 \*------------------------------------*/
 .about-us article {
   text-align: justify;
-  //width: 296px;
-  //margin: 0 auto;
 }
 .about-us img {
   height: 100%;
@@ -445,27 +465,7 @@ li {
 }
 .about-us p {
   color: #474747;
-  font-size: 16px;
-}
-/*
-.about-us article:nth-child(2) {
-  float: left;
-}
-.about-us article:nth-child(3) {
-  float: right;
-}
-*/
-.left-column, .right-column, .center-column {
-  width: 296px;
-}
-.left-column {
-  float: left;
-}
-.right-column {
-  float: right;
-}
-.center-column {
-  margin: 0 auto;
+  font-size: 1.203em;
 }
 /*------------------------------------*\
   #NEWSLETTER
@@ -476,7 +476,7 @@ li {
   background-color: #3c3c3c;
 }
 .newsletter-title {
-  font-size: 21.3px;
+  font-size: 1.602em;
   color: #fff;
 }
 .newsletter-form, .newsletter-links {
@@ -495,7 +495,7 @@ li {
   box-sizing: border-box;
   background-color: #fff;
   color: #3c3c3c;
-  font-size: 14.7px;
+  font-size: 1.105em;
 }
 .newsletter-form input[type="submit"] {
   position: absolute;
@@ -505,7 +505,7 @@ li {
   background-color: #f19200;
   color: #fff;
   cursor: pointer;
-  font-size: 18.7px;
+  font-size: 1.406em;
 }
 .newsletter-links a {
   margin: 0 12px;
@@ -517,45 +517,43 @@ li {
 /*-------------------------*\
 #COMPANY
 \*-------------------------*/
-
 .company {
-  margin-top: 48px;
-  border: 1px solid green;
+  margin: 48px 0;
+  color: #3c3c3c;
+  line-height: 24px;
+  text-align: justify;
 }
 
-.company-title, .company-info, .company-service, .company-address {
-  float: left;
+.company article {
+  display: inline-block;
   width: 216px;
+  margin-bottom: 24px;
+  vertical-align: top;
+  box-sizing: border-box;
 }
 
-.company-title {
-  width: 216px;
+.company h2 {
+  margin-bottom: 24px;
 }
-
-.company-title__logo {
+.company a {
+  display: block;
+}
+.company-story p {
+  margin-top: 1em;
+}
+.company-info, .company-service, .company-address {
+  font-size: 1.203em;
+}
+.company-address {
+  font-size: 1.105em;
+}
+.company-story__logo {
   width: 136px;
   -moz-filter:grayscale(100%);
   -webkit-filter:grayscale(100%);
   -o-filter:grayscale(100%);
   -ms-filter:grayscale(100%);
   filter:grayscale(100%);
-}
-
-.company-title__rate {
-  width: 68px;
-}
-
-.company-title p {
-  font-size: 13.3px;
-  color: #3c3c3c;
-  line-height: 24px;
-  text-align: justify;
-}
-
-.company-info a, .company-service a, .company-address a, .company-address p {
-  display: block;
-  font-size: 16px;
-  color: #3c3c3c;
 }
 
 /*one column*/
@@ -584,6 +582,7 @@ li {
     text-align: center;
   }
 }
+
 /*two columns*/
 @media (min-width: 480px) and (max-width: 719px) {
   .content {
@@ -602,13 +601,29 @@ li {
   .newsletter-title, .newsletter-links {
     text-align: center;
   }
-  .about-us article {
+  .main-menu li a {
+    margin: 0;
+    padding: 0 11px;
+  }
+  .banner figcaption {
+    top: 0;
+    width: 100%;
   }
 }
 /*three columns*/
 @media (min-width: 720px) and (max-width: 959px) {
   .content {
     width: 720px;
+  }
+  .products {
+    margin-right: auto;
+    margin-left: auto;
+    width: 456px;
+  }
+  .company {
+    margin-left: auto;
+    margin-right: auto;
+    width: 456px;
   }
   .left-column, .right-column, .center-column {
     width: 216px;
@@ -627,5 +642,11 @@ li {
 @media (min-width: 960px) {
   .content {
     width: 960px;
+  }
+  .company-info {
+    padding-left: 37px;
+  }
+  .company-service {
+    padding-left: 13px;
   }
 }
