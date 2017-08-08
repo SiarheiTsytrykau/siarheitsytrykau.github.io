@@ -307,34 +307,28 @@ a {
 /*------------------------------------*\
   #BANNER
 \*------------------------------------*/
-.banner {
+#banner {
   position: relative;
   margin: 72px 0 48px;
-  background: #6c6c6c;
-}
-.banner-slides {
   white-space: nowrap;
   font-size: 0;
   overflow: hidden;
 }
-.banner-slides:before {
-  content: "";
+#banner figure {
+  position: relative;
   display: inline-block;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+#banner figure:first-child {
   //margin-left: -100%;
   //margin-left: -200%;
+  -webkit-transition: margin-left 1s;
+  -moz-transition: margin-left 1s;
+  transition: margin-left 1s;
 }
-.banner figure {
-  width: 100%;
-  display: inline-block;
-  text-align: center;
-  position: relative;
-}
-.banner img {
-  vertical-align: middle;
-  display: inline-block;
-  width: 100%;
-}
-.banner figcaption {
+#banner figcaption {
   position: absolute;
   top: 25%;
   left: 0;
@@ -346,21 +340,48 @@ a {
   letter-spacing: -2px;
   white-space: normal;
 }
-.banner figcaption b {
+#banner figcaption b {
   font-family: 'Open Sans';
 }
-.banner input {
+#banner input[type="button"] {
   position: absolute;
-  background-color: unset;
-}
-.banner input[type="button"] {
+  background-color: transparent;
   top: 70%;
   left: 10%;
   width: 220px;
   height: 36px;
   color: #fff;
-  font-size: 1.805em;
+  font-size: 24px;
   border: 1px solid #fff3eb;
+  cursor: pointer;
+}
+.switchers {
+  position: absolute;
+  left: 0;
+  bottom: 5%;
+  width: 100%;
+  font-size: 0;
+  text-align: center;
+}
+.switch {
+  display: inline-block;
+  margin: 0 5px;
+  height: 14px;
+  width: 14px;
+  line-height: 14px;
+  border: 1px solid #fff3eb;
+  border-radius: 50%;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.check:after, .switch:hover:after{
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  vertical-align: middle;
+  background-color: #fff3eb;
 }
 
 /*------------------------------------*\
@@ -571,6 +592,15 @@ a {
     display: inline-block;
     width: 100%;
   }
+  #banner figcaption {
+    top: 0;
+    width: 100%;
+    font-size: 30px;
+  }
+  #banner input[type="button"] {
+    left: 5%;
+    width: 90%;
+  }
   .about-us article:last-child h2 {
     line-height: 48px;
   }
@@ -605,8 +635,7 @@ a {
     margin: 0;
     padding: 0 11px;
   }
-  .banner figcaption {
-    top: 0;
+  #banner figcaption {
     width: 100%;
   }
 }
@@ -615,18 +644,11 @@ a {
   .content {
     width: 720px;
   }
-  .products {
-    margin-right: auto;
-    margin-left: auto;
-    width: 456px;
-  }
-  .company {
-    margin-left: auto;
-    margin-right: auto;
-    width: 456px;
-  }
   .left-column, .right-column, .center-column {
     width: 216px;
+  }
+  #banner figcaption {
+    width: 70%;
   }
   .about-us article img {
     float: left;
