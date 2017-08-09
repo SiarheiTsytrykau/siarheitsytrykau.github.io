@@ -285,23 +285,61 @@ a {
   margin: 48px 0;
   background-color: #333;
 }
-.main-menu li {
+.main-menu > ul > li {
   display: inline-block;
+  position: relative;
 }
-.main-menu li a {
+.main-menu > ul > li > a {
   display: inline-block;
   padding: 0 12px;
   margin: 0 18px;
   font-size: 1.602em;
   color: #fefefe;
 }
-.main-menu li:first-child a:first-child {
+.main-menu > ul > li:first-child > a:first-child {
   margin-left: 0;
   padding-left: 0;
 }
-.main-menu a:hover, .main-menu a:focus {
+.main-menu ul > li > a:hover, .main-menu > ul > li > a:focus {
   background-color: #fff;
   color: inherit;
+}
+.main-menu > ul > li:hover > ul.submenu {
+  display: block;
+}
+
+/*------------------------------------*\
+  #SUBMENU
+\*------------------------------------*/
+.submenu {
+  display: none;
+  width: 560px;
+  padding: 1em 0 2em;
+  position: absolute;
+  left: 18px;
+  top: 72px;
+  font-size: 1.203em;
+  font-size: 16px;
+  line-height: 28px;
+  z-index: 1;
+  color: #333;
+  background-color: #fff;
+}
+.submenu li {
+  padding: 0 20px;
+  list-style-type: square;
+  list-style-position: inside;
+}
+.submenu li:hover, .submenu li:active {
+  color: #fff;
+  background-color: #333;
+  cursor: pointer;
+}
+.menu-column {
+  display: inline-block;
+}
+.menu-column:first-of-type {
+  margin-right: 10px;
 }
 
 /*------------------------------------*\
@@ -428,6 +466,7 @@ a {
   vertical-align: middle;
 }
 /* end crop and center */
+
 .product-image figcaption, .product-price, .product-order{
   height: 45px;
   line-height: 45px;
@@ -442,7 +481,6 @@ a {
 .product-price span {
   color: #dc5047;
   font-size: 1.308em;
-  //font-size: 18.7px;
   letter-spacing: -1px;
 }
 .product-price .old-price {
@@ -611,6 +649,21 @@ a {
     line-height: 36px;
     text-align: center;
   }
+  .main-menu {
+    line-height: 1.5;
+  }
+  .main-menu > ul > li > a {
+    padding: 0 6px;
+    margin: 0;
+  }
+  .submenu {
+    width: 200px;
+    left: 0;
+    top: 32px;
+  }
+  .menu-column {
+    width: 100%;
+  }
 }
 
 /*two columns*/
@@ -631,10 +684,18 @@ a {
   .newsletter-title, .newsletter-links {
     text-align: center;
   }
-  .main-menu li a {
+  .main-menu > ul > li > a {
     margin: 0;
     padding: 0 11px;
   }
+  .submenu {
+    width: 200px;
+    left: 0;
+  }
+  .menu-column {
+    width: 100%;
+  }
+
   #banner figcaption {
     width: 100%;
   }
