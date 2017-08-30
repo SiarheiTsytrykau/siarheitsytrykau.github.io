@@ -1,6 +1,6 @@
 function LastFm(api_key) {
   this.apiKey = "322b365de048b251b67a31166b9529d0";
-  this.rootURL = "http://ws.audioscrobbler.com/2.0/";
+  this.rootURL = "https://ws.audioscrobbler.com/2.0/";
 }
 
 LastFm.prototype.load = function(queryParam, callback) {
