@@ -96,6 +96,8 @@ a {
 }
 
 .content {
+  border: 3px solid red;
+/*    min-width: 768px;*/
   margin: 0 auto;
   padding-left: 12px;
   padding-right: 12px;
