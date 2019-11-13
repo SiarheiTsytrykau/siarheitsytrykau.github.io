@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+/*  box-sizing: border-box;*/
 }
 
 li {
@@ -8,8 +9,8 @@ li {
 }
 
 header {
-    background: no-repeat url("../image/netflix.png");
-/*    background-color: #999;*/
+    background: content-box url("../image/netflix.png");
+    margin: -1px 0;
 }
 
 footer {
@@ -71,5 +72,6 @@ footer {
 }
 
 .logo {
-    margin: 10px 40px;
+    padding: 10px 40px;
+    color: red;
 }
