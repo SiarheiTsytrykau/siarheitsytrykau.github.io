@@ -7,14 +7,6 @@ li {
   list-style: none;
 }
 
-.content {
-/*  border: 3px solid red;*/
-  margin: 0 auto;
-  padding-left: 30px;
-  padding-right: 30px;
-  box-sizing: border-box;
-}
-
 .bar {
 /*  border: 3px solid red;*/
 /*  margin: 0 auto;*/
@@ -26,10 +18,13 @@ li {
 }
 
 footer {
-    padding: 15px 100px;
-      background-color: #555555;
-    
+    padding: 10px;
+    background-color: #424242;
+    text-align: center;
 
+}
+header {
+    background: no-repeat url("../image/Netflix-1.png");
 }
 
 /*------------------------------------*\
@@ -46,6 +41,7 @@ footer {
 
 .film {
     margin: 20px;
+    
 }
 
 .full-info {
@@ -93,11 +89,13 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     align-content: flex-start;
+    background-color: #232323;
 }
 
 .logo {
     margin: 10px 20px;
 }
+
 
 
 /*------------------------------------*\
